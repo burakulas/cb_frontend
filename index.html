@@ -38,6 +38,7 @@
         chat.innerHTML += `<div class='msg bot'>Bot: ${botMsg}</div>`;
         chat.scrollTop = chat.scrollHeight;
       } catch (err) {
+        console.error("Fetch error:", err);
         chat.innerHTML += `<div class='msg bot'>Bot: [Failed to fetch reply]</div>`;
       }
     }
