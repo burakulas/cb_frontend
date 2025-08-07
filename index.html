@@ -127,6 +127,7 @@
             background-color: #5b81b3;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="chat-container">
@@ -135,8 +136,8 @@
         </div>
         <div id="chat"></div>
         <div class="input-container">
-            <input id="input" type="text" placeholder="Type your message...">
-            <button onclick="sendMessage()">Send</button>
+            <input id="input" type="text" placeholder="...">
+            <button onclick="sendMessage()"><i class="fas fa-arrow-up"></i></button>
         </div>
     </div>
 
@@ -146,7 +147,7 @@
             const chat = document.getElementById('chat');
             const userMsg = input.value.trim();
             if (!userMsg) return;
-            chat.innerHTML += `<div class='msg user'><em>You</em>: ${userMsg}</div>`;
+            chat.innerHTML += `<div class='msg user'>. ${userMsg}</div>`;
             input.value = '';
 
             try {
