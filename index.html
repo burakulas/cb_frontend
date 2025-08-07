@@ -146,8 +146,7 @@
             const chat = document.getElementById('chat');
             const userMsg = input.value.trim();
             if (!userMsg) return;
-
-            chat.innerHTML += `<div class='msg user'>You: ${userMsg}</div>`;
+            chat.innerHTML += `<div class='msg user'><em>You</em>: ${userMsg}</div>`;
             input.value = '';
 
             try {
@@ -163,7 +162,7 @@
                 chat.scrollTop = chat.scrollHeight;
             } catch (err) {
                 console.error("Fetch error:", err);
-                chat.innerHTML += `<div class='msg bot'>SAbot: [Failed to fetch reply]</div>`;
+                chat.innerHTML += `<div class='msg bot'><em>SAbot<em>: [Failed to fetch reply]</div>`;
             }
         }
 
