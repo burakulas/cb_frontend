@@ -1,7 +1,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Poetic Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAbot</title>
   <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -119,11 +120,19 @@
         }
   </style>
 </head>
+  
 <body>
-  <h1>Groq Chatbot</h1>
-  <div id="chat"></div>
-  <input id="input" type="text" placeholder="Type your message..." style="width: 80%;">
-  <button onclick="sendMessage()">Send</button>
+  <div class="chat-container">
+        <div class="chat-header">
+            SAbot
+        </div>
+        <div class="chat-window" id="chat-window">
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Ask me something...">
+            <button id="send-button">Send</button>
+        </div>
+  </div>
 
   <script>
     async function sendMessage() {
