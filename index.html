@@ -158,11 +158,11 @@
 
                 const data = await response.json();
                 const botMsg = data.reply || '[Error]';
-                chat.innerHTML += `<div class='msg bot'>SAbot: ${botMsg}</div>`;
+                chat.innerHTML += `<div class='msg bot'><em>SAbot</em>: ${botMsg}</div>`;
                 chat.scrollTop = chat.scrollHeight;
             } catch (err) {
                 console.error("Fetch error:", err);
-                chat.innerHTML += `<div class='msg bot'><em>SAbot<em>: [Failed to fetch reply]</div>`;
+                chat.innerHTML += `<div class='msg bot'><em>SAbot</em>: [Failed to fetch reply]</div>`;
             }
         }
 
