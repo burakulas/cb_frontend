@@ -159,7 +159,7 @@
 
                 const data = await response.json();
                 const botMsg = data.reply || '[Error]';
-                chat.innerHTML += `<div class='msg bot'>Bot: ${botMsg}</div>`;
+                chat.innerHTML += `<div class='msg bot'>SAbot: ${botMsg}</div>`;
                 chat.scrollTop = chat.scrollHeight;
             } catch (err) {
                 console.error("Fetch error:", err);
