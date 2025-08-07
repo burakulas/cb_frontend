@@ -167,8 +167,9 @@
             }
         }
 
-        // Add event listener to the input field for the 'Enter' key
+        // It listens for a keypress event on the input field.
         document.getElementById('input').addEventListener('keypress', function(event) {
+            // If the pressed key is 'Enter', the sendMessage function is called.
             if (event.key === 'Enter') {
                 sendMessage();
             }
